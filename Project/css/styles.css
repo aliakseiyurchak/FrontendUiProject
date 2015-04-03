@@ -320,3 +320,56 @@ aside h3:before {
 aside h3.alert:before {
 	content: '!';
 }
+
+.tag-cloud {
+	margin: 0;
+	padding: 0;
+}
+.tag-cloud li {
+	height: 18px;
+	background: #6794b7;
+	color: white;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	padding: 0 20px 0 14px;
+	margin: 0 8px 6px 0;
+	position: relative;
+	transition: background .4s ease;
+}
+.tag-cloud li:hover {
+	background: #59809e;
+}
+.tag-cloud li:before {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 9px 0 9px 9px;
+	border-color: transparent transparent transparent #6794b7;
+	position: absolute;
+	right: -9px;
+	top: 0;
+	content: '';
+	display: block;
+	transition: border .4s ease;
+}
+.tag-cloud li:hover:before {
+	border-left-color: #59809e;
+}
+.tag-cloud li:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #fff;
+	margin-top: -4px;
+}
+.tag-cloud li a {
+	color: inherit;
+	text-decoration: none;
+}
