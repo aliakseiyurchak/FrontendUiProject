@@ -207,7 +207,7 @@ article .article-info-author a:hover
 
 article .fa {
 
-	padding: 0 7px;
+	padding: 0 4px;
 
 }
 
@@ -262,7 +262,7 @@ article .article-social a {
 
 article .article-social li#facebook:hover {
 
-	background: #226dc3;
+	background: #3c5a98;
 }
 
 article .article-social li#googleplus:hover {
@@ -272,19 +272,19 @@ article .article-social li#googleplus:hover {
 
 article .article-social li#twitter:hover {
 
-	background: #5bb1de;
+	background: #00aced;
 
 }
 
 article .article-social li#vk:hover {
 
-	background: #168ce0;
+	background: #48729e;
 
 }
 
 article .article-social li#instagram:hover {
 
-	background: #867644;
+	background: #d83933;
 
 }
 
@@ -306,14 +306,14 @@ aside h3 {
 aside h3:before {
 	content: '?';
 	display: block;
-	height: 27px;
-	width: 30px;
+	height: 28px;
+	width: 28px;
 	background: #6794b7;
 	color: white;
 	position: absolute;
 	left: 0;
 	top: 0;
-	line-height: 26px;
+	line-height: 28px;
 	text-align: center;
 }
 
@@ -340,7 +340,7 @@ aside h3.alert:before {
 	transition: background .4s ease;
 }
 .tag-cloud li:hover {
-	background: #59809e;
+	background: #b2d4ec;
 }
 .tag-cloud li:before {
 	width: 0;
@@ -356,7 +356,7 @@ aside h3.alert:before {
 	transition: border .4s ease;
 }
 .tag-cloud li:hover:before {
-	border-left-color: #59809e;
+	border-left-color: #b2d4ec;
 }
 .tag-cloud li:after {
 	content: '';
@@ -372,4 +372,116 @@ aside h3.alert:before {
 .tag-cloud li a {
 	color: inherit;
 	text-decoration: none;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+	main aside,
+	main section {float: none; width: 100%;}
+	main {width: 100%;}
+	main aside {
+		padding: 0 60px;
+	}
+	aside h3.quest,
+	aside h3.alert {
+		position: absolute;
+		left: 0;
+		top: 87px;
+		height: 58px;
+		width: 43px;
+		border: none;
+		font-size: 0;
+		border-bottom: 4px solid transparent;
+		cursor: pointer;
+	}
+	aside h3.quest span,
+	aside h3.alert span {
+		font-size: 17px;
+	  height: 43px;
+	  transform: rotate(-90deg);
+	  position: absolute;
+	  left: 0;
+  	bottom: -143px;
+	  background: #eef4fa;
+	  color: #6290b4;
+	  line-height: 43px;
+	  padding: 0 18px;
+	  display: none;
+	  transform-origin: 0 0;
+	}
+	aside h3.alert {
+		right: 0;
+		left: auto;
+	}
+	aside h3.alert span {
+		left: 0;
+  	bottom: -177px;
+  	white-space: nowrap;
+	}
+	aside h3.quest:before,
+	aside h3.alert:before {
+		font-size: 17px;
+		width: 100%;
+		height: 100%;
+		line-height: 58px;
+		color: #6b9ad0;
+		background: rgba(255,255,255,0.25);
+		transition: all .4s ease;
+	}
+	aside h3:hover:before {
+		background: rgba(255,255,255,0.45);
+	}
+	aside p {
+		display: none;
+	}
+	.tag-cloud {
+		text-align: center;
+		margin: 24px 0;
+	}
+	article {position: relative; padding: 0 60px;}
+	article .article-social {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin: 0;
+		width: 60px;
+  	text-align: right;
+	}
+	article .article-social li {
+		margin-bottom: 7px;
+		display: inline-block;
+	}
+
+
+#facebook{
+	background: #3c5a98;
+}
+
+#googleplus {
+	background: #c25234;
+}
+
+#twitter {
+	background: #00aced;
+}
+
+#vk {
+	background: #48729e;
+}
+
+#instagram {
+	background: #d83933;
+}
+
+
+	.fixed aside h3.quest,
+	.fixed aside h3.alert {
+		position: fixed;
+		top: 0;
+		z-index: 101;
+	}
 }
