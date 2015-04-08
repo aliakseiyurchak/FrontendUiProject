@@ -15,27 +15,26 @@
 .top-logo a {
 
 	display: inline-block;
-	width: 366px;
-	height: 56px;
+	max-width: 366px;
 
+}
+
+.top-logo a img {
+
+	width: 100%;
 }
 
 .menu-block {
-
 	height: 54px;
 	background: #6b9ad0;
 	position: relative;
-	margin-bottom: 30px;
-	
 }
 
 .underline {
-
 	height: 4px;
 	background: #c6defa; 
 	width: 100%
-
-	}
+}
 
 menu {
 
@@ -47,6 +46,8 @@ menu {
 
 	font-size: 0;
 	text-align: center;
+	max-width: 983px;
+	margin: 0 auto;
 }
 
 .menu-block menu li {
@@ -56,7 +57,7 @@ menu {
 	color: #f1f5fa;
 	height: 48px;
 	margin: 3px 0;
-	width: 120px;
+	width: 12.125%;
 	position: relative;
 
 }
@@ -98,7 +99,6 @@ menu {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: inherit;
-	height: 100%;
 	line-height: 48px;
 
 }
@@ -110,22 +110,23 @@ menu {
 
 main {
 
-	width: 983px;
+	max-width: 983px;
+	min-width: 310px;
 	margin: 0 auto;
 	margin-top: 53px;
-
 }
+
 
 main section {
 
-	width: 670px;
+	width: 68.3%;
 	float: left;
-	padding-left: 30px;
+	padding-left: 29px;
 }
 
 main aside {
 
-	width: 312px;
+	width: 31.7%;
 	float: right;
 	padding-left: 27px;
 
@@ -134,20 +135,21 @@ main aside {
 section article {
 
 	width: 100%;
-	margin-bottom: 57px;
+	margin-bottom: 55px;
 }
 
 article img {
 
 	display: block;
 	width: 100%;
+	max-height: 228px;
 
 } 
 
 article a.h3 {
 
 	text-decoration: none;
-	display: block;
+	display: inline-block;
 	margin: 14px 0 9px;
 
 }
@@ -175,6 +177,8 @@ article .article-info {
 	border-top: 1px solid #e2e5e8;
 	border-bottom: 1px solid #e2e5e8;
 	height: 40px;
+	clear: both;
+	width: 100%;
 
 }
 
@@ -374,18 +378,39 @@ aside h3.alert:before {
 	text-decoration: none;
 }
 
+.fixed .menu-block {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.fixed .top-logo {
+	padding-bottom: 134px;
+}
 
 
 
 
 
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 321px) and (max-width: 863px) {
+
 	main aside,
-	main section {float: none; width: 100%;}
-	main {width: 100%;}
-	main aside {
-		padding: 0 60px;
+	main section {
+		float: none; 
+		width: 100%;
 	}
+
+	main {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	main aside {
+		padding: 40px 0 32px;
+	}
+
 	aside h3.quest,
 	aside h3.alert {
 		position: absolute;
@@ -398,30 +423,34 @@ aside h3.alert:before {
 		border-bottom: 4px solid transparent;
 		cursor: pointer;
 	}
+
 	aside h3.quest span,
 	aside h3.alert span {
 		font-size: 17px;
-	  height: 43px;
-	  transform: rotate(-90deg);
-	  position: absolute;
-	  left: 0;
-  	bottom: -143px;
-	  background: #eef4fa;
-	  color: #6290b4;
-	  line-height: 43px;
-	  padding: 0 18px;
-	  display: none;
-	  transform-origin: 0 0;
+	  	height: 43px;
+	  	transform: rotate(-90deg);
+	  	position: absolute;
+	 	left: 0;
+  		bottom: -143px;
+	 	 background: #eef4fa;
+	  	color: #6290b4;
+	  	line-height: 43px;
+	  	padding: 0 18px;
+	  	display: none;
+	  	transform-origin: 0 0;
 	}
+
 	aside h3.alert {
 		right: 0;
 		left: auto;
 	}
+
 	aside h3.alert span {
 		left: 0;
-  	bottom: -177px;
-  	white-space: nowrap;
+  		bottom: -177px;
+  		white-space: nowrap;
 	}
+
 	aside h3.quest:before,
 	aside h3.alert:before {
 		font-size: 17px;
@@ -432,51 +461,62 @@ aside h3.alert:before {
 		background: rgba(255,255,255,0.25);
 		transition: all .4s ease;
 	}
+
 	aside h3:hover:before {
 		background: rgba(255,255,255,0.45);
 	}
+
 	aside p {
 		display: none;
+		padding: 0 64px;
+  		text-align: justify;
+  		margin: 0 0 40px;
 	}
+
 	.tag-cloud {
 		text-align: center;
-		margin: 24px 0;
+		margin: 0 32 32px;
 	}
-	article {position: relative; padding: 0 60px;}
+
+	article {
+		position: relative; 
+		padding: 0 60px;
+	}
+
 	article .article-social {
 		position: absolute;
 		right: 0;
 		top: 0;
 		margin: 0;
 		width: 60px;
-  	text-align: right;
+  		text-align: right;
 	}
+
 	article .article-social li {
 		margin-bottom: 7px;
 		display: inline-block;
 	}
 
 
-#facebook{
-	background: #3c5a98;
-}
+	#facebook{
+		background: #3c5a98;
+	}
 
-#googleplus {
-	background: #c25234;
-}
+	#googleplus {
+		background: #c25234;
+	}
 
-#twitter {
-	background: #00aced;
-}
+	#twitter {
+		background: #00aced;
+	}
 
-#vk {
-	background: #48729e;
-}
+	#vk {
+		background: #48729e;
+	}
 
-#instagram {
-	background: #d83933;
-}
-
+	#instagram {
+		background: #d83933;
+	}
 
 	.fixed aside h3.quest,
 	.fixed aside h3.alert {
@@ -484,4 +524,13 @@ aside h3.alert:before {
 		top: 0;
 		z-index: 101;
 	}
+
+
 }
+
+
+@media and screen and (max-width: 320px) {
+
+
+}
+
