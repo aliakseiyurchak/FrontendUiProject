@@ -50,7 +50,11 @@ menu {
 	margin: 0 auto;
 }
 
-.menu-block menu li {
+.menu-block ul {
+	padding:0;
+}
+
+.menu-block menu ul li {
 
 	display: inline-block;
 	font-size: 14px;
@@ -62,7 +66,7 @@ menu {
 
 }
 
-.menu-block menu li.active:before {
+.menu-block menu ul li.active:before {
 
 	content:'';
 	width: 0;
@@ -103,7 +107,7 @@ menu {
 
 }
 
-.menu-block menu a:hover {
+.menu-block menu ul li a:hover {
 
 	background: #7ca7d9;
 }
@@ -293,9 +297,7 @@ article .article-social li#instagram:hover {
 }
 
 
-/*------ASIDE------*/
-
-aside h3 {
+.some-info h3 {
 	margin:0;
 	padding: 0;
 	border-bottom: 5px solid #6794b7;
@@ -307,7 +309,7 @@ aside h3 {
 	position: relative;
 }
 
-aside h3:before {
+.some-info h3:before {
 	content: '?';
 	display: block;
 	height: 28px;
@@ -321,7 +323,7 @@ aside h3:before {
 	text-align: center;
 }
 
-aside h3.alert:before {
+.some-info h3.alert:before {
 	content: '!';
 }
 
@@ -390,9 +392,86 @@ aside h3.alert:before {
 }
 
 
+.menu-block menu .logo_menu{
+	display: inline-block;
+	width: 41px;
+	height: 41px;
+	background: url(../images/logo_menu.png) no-repeat;
+	float: left;
+	margin:7px 0 0 28px;
+	position: absolute;
+	display: none;
+	left: 0;
+}
+
+.menu-block menu .logo_menu_phone{
+	display: inline-block;
+	width: 135px;
+	height: 23px;
+	background: url(../images/logo_menu_phone.png) no-repeat;
+	float: left;
+	position: absolute;
+  	display: none;
+  	left: 118px;
+  	top: 5px;
+}
+
+span.tag_icon {
+	display: none;
+}
+
+span.up_icon {
+	display: none;
+}
 
 
-@media screen and (min-width: 321px) and (max-width: 863px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 471px) and (max-width: 863px) {
 
 	main aside,
 	main section {
@@ -409,10 +488,31 @@ aside h3.alert:before {
 		padding: 40px 0 32px;
 	}
 
-	aside h3.quest,
-	aside h3.alert {
+	.menu-block menu ul li {
+		width: auto;
+	}
+
+	.menu-block menu ul li a {
+		padding: 0 7px;
+	}
+
+	.some-info h3.quest
+	{
 		position: absolute;
 		left: 0;
+		top: 90px;
+		height: 53px;
+		width: 44px;
+		border: none;
+		font-size: 0;
+		border-bottom: 4px solid transparent;
+		cursor: pointer;w
+	}
+
+
+	.some-info h3.alert {
+		position: absolute;
+		right: 0;
 		top: 90px;
 		height: 53px;
 		width: 44px;
@@ -422,11 +522,26 @@ aside h3.alert:before {
 		cursor: pointer;
 	}
 
-	aside h3.quest span,
-	aside h3.alert span {
+
+	.some-info h3.quest span {
 		font-size: 17px;
 	  	height: 43px;
-	  	transform: rotate(-90deg);
+	  	position: absolute;
+	 	left: 0;
+  		bottom: -145px;
+	 	 background: #eef4fa;
+	  	color: #6290b4;
+	  	line-height: 43px;
+	  	padding: 0 18px;
+	  	display: none;
+	  	transform-origin: 0 0;
+		transform: rotate(-90deg);
+
+	}
+
+	.some-info h3.alert span {
+		font-size: 17px;
+	  	height: 43px;
 	  	position: absolute;
 	 	left: 0;
   		bottom: -143px;
@@ -436,21 +551,23 @@ aside h3.alert:before {
 	  	padding: 0 18px;
 	  	display: none;
 	  	transform-origin: 0 0;
+		transform: rotate(90deg);
 	}
 
-	aside h3.alert {
+
+/*	.some-info h3.alert {
 			right: 0;
 			left: auto;
+	}*/
+
+	.some-info h3.alert span {
+		left: 43px;
+ 		bottom: -49px;
+ 		white-space: nowrap;
 	}
 
-	aside h3.alert span {
-		left: 0;
-  		bottom: -177px;
-  		white-space: nowrap;
-	}
-
-	aside h3.quest:before,
-	aside h3.alert:before {
+	.some-info h3.quest:before,
+	.some-info h3.alert:before {
 		font-size: 17px;
 		width: 100%;
 		height: 100%;
@@ -516,8 +633,8 @@ aside h3.alert:before {
 		background: #d83933;
 	}
 
-	.fixed aside h3.quest,
-	.fixed aside h3.alert {
+	.fixed .some-info h3.quest,
+	.fixed .some-info h3.alert {
 		position: fixed;
 		top: 2px;
 		z-index: 101;
@@ -527,17 +644,89 @@ aside h3.alert:before {
 }
 
 
-@media screen and (max-width: 320px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:370px) and (max-width: 470px)
+{
+	.top-logo a img {
+  	width: 72%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PHONE */
+
+
+@media screen and (max-width: 470px) {
 
 	main aside,
 	main section {
 		float: none; 
 		width: 100%;
-		padding: 0 16px;
 	}
 
 	main aside, main section, .top-logo {
 		min-width: 303px;
+	}
+
+	main aside {
+		background: #e1eefc; 
+		padding: 0 16px;
+	}
+
+	main section {
+		padding: 18px 16px;
 	}
 
 	main {
@@ -559,8 +748,8 @@ aside h3.alert:before {
 
 
 
-	.underline, .menu-block li:before, .menu-block li:after {
-		visibility: hidden;
+	.underline, li.active:before, li.active:after {
+		display: none;
 	}
 
 
@@ -598,8 +787,8 @@ aside h3.alert:before {
 		background: #d83933;
 	}
 
-	aside h3.quest,
-	aside h3.alert {
+	.some-info h3.quest,
+	.some-info h3.alert {
 		position: absolute;
 		left: 2px;
 		top: 55px;;
@@ -611,15 +800,15 @@ aside h3.alert:before {
 		cursor: pointer;
 	}
 
-	aside h3.quest span,
-	aside h3.alert span {
+	.some-info h3.quest span,
+	.some-info h3.alert span {
 		font-size: 17px;
 	  	height: 43px;
 	  	transform: rotate(-90deg);
 	  	position: absolute;
 	 	left: 0;
   		bottom: -143px;
-	 	 background: #eef4fa;
+	 	background: #eef4fa;
 	  	color: #6290b4;
 	  	line-height: 43px;
 	  	padding: 0 18px;
@@ -627,19 +816,18 @@ aside h3.alert:before {
 	  	transform-origin: 0 0;
 	}
 
-	aside h3.alert {
+	.some-info h3.alert {
 		left: 35px;
 	}
 
-	aside h3.alert span {
+	.some-info h3.alert span {
 		left: 0;
   		bottom: -177px;
   		white-space: nowrap;
 	}
 
-	aside h3.quest:before,
-	aside h3.alert:before, 
-	aside .tag-cloud:before {
+	.some-info h3.quest:before,
+	.some-info h3.alert:before {
 		font-size: 15px;
   		width: 72%;
   		height: 100%;
@@ -649,35 +837,36 @@ aside h3.alert:before {
 		transition: all .4s ease;
 	}
 
-	aside h3:hover:before {
+	.some-info h3:hover:before, .tags span:hover {
 		background: rgba(255,255,255,0.45);
 	}
 
-	aside p {
-
+	.some-info p {
 		text-align: justify;
-
+		padding: 25px 0 32px;
+		margin: 0;
+		display: none;
 	}
 
+
 	.tag-cloud {
+		display: none;
 		text-align: center;
+		padding: 32px 6px 36px;
 	}
 	
 	.tag-cloud li {
 		padding: 0 12px 0 14px;
 	}
 
-	.fixed aside h3.quest,
-	.fixed aside h3.alert {
+
+	.fixed .some-info h3.quest,
+	.fixed .some-info h3.alert {
 		position: fixed;
 		top: 2px;
 		z-index: 101;
 	}
 
-
-	menu {
-		visibility: hidden;
-	}
 
 	.menu-block {
 		height: 33px;
@@ -694,6 +883,95 @@ aside h3.alert:before {
 		font-size: 12px;
 
 	}
-	
-}
 
+	span.tag_icon {
+		display: inline-block;
+  		position: absolute;
+  		top: 55px;
+  		left: 68px;
+  		transform: rotate(180deg);
+  		cursor: pointer;
+  		width: 30px;
+  		height: 29px;
+ 		 color: #6b9ad0;
+  		text-align: center;
+  		vertical-align: middle;
+  		background: rgba(255,255,255,0.25);
+  		line-height: 28px;
+	}
+	
+	.tags span.tag_icon:hover {	
+		background: rgba(255,255,255,0.45);
+	}
+
+	.fixed span.tag_icon {
+		position: fixed;
+		top: 2px;
+		z-index: 101;
+	}
+
+	.some-info h3.quest span,
+	.some-info h3.alert span {
+		font-size: 17px;
+	  	height: 43px;
+	  	position: absolute;
+	 	left: 0;
+  		bottom: -143px;
+	 	background: #eef4fa;
+	  	color: #6290b4;
+	  	line-height: 43px;
+	  	padding: 0 18px;
+	  	display: none;
+	  	transform-origin: 0 0;
+	}
+
+	span.menu_icon {
+		font-size: 23px;
+  		position: absolute;
+  		top: 6px;
+  		right: 12px;
+  		color: rgba(255,255,255,0.25);
+  		cursor: pointer;
+	}
+
+	span.menu_icon:hover {
+		color: rgba(255,255,255,0.65);
+	}
+
+	.menu-block {
+		height: auto;
+		padding-top: 34px;
+	}
+
+	.menu-block menu ul li{
+		display: none;
+		width: 100%
+
+	}
+
+	.menu-block ul{
+		
+		background: #fff;
+		padding: 1px 0;
+	}
+
+	.menu-block ul li a{
+		background: #e1eefc;
+		color: #7ca5d6;
+	}
+
+	.menu-block ul li a:hover{
+		background: #a8cdf5;
+		color: #ffffff;
+	}
+
+	span.up_icon{
+		position: absolute;
+ 		right: 11px;
+  		top: 276px;
+  		font-size: 22px;
+  		color: white;
+  		cursor: pointer;
+  		display: block;
+	}
+}
