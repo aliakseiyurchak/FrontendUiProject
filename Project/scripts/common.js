@@ -1,27 +1,70 @@
 jQuery(document).ready(function(){
-	var width = $(document).width();
+
+	var width = $(window).width();
 	var time = 500;
-	if( width < 863) {
-		$('aside h3').on('click',function(){
-			
-			$('aside p').hide();
-			$('aside h3 span').hide();
-			$(this).find('span').toggle(time);
-			$(this).next().toggle(time);
+	if( width < 863 && width >= 471) {
+
+		$('aside h3.alert').on('click',function(){
+			$('h3.quest span').hide(time);
+			$('aside p.quest_info').hide(time);
+			$('h3.alert span').toggle(time);
+			$('aside p.alert_info').toggle(time);
 		});
-	}
-	if (width < 471) {
-		$('.tags span').on('click', function(){
-			$('.tag-cloud').toggle(time);
-		});
-		$('menu span.fa').on('click', function(){
-			$('.menu-block ul li').toggle(time);
+
+		$('aside h3.quest').on('click',function(){
+			$('h3.alert span').hide(time);
+			$('aside p.alert_info').hide(time);
+			$('h3.quest span').toggle(time);
+			$('aside p.quest_info').toggle(time);
 		});
 	};
 
-	$(document).scroll(function(){
+	if (width < 471) {
+		$('aside h3.alert').on('click',function(){
+			$('.menu-block ul li').hide(time);
+			$('h3.quest span').hide(time);
+			$('aside p.quest_info').hide(time);
+			$('.tag-cloud').hide(time);
+			$('aside p.alert_info').toggle(time);
+			$('h3.alert span').toggle(time);
+		});
+
+		$('.tags span').on('click', function(){
+			$('.tag-cloud').toggle(time);
+			$('.menu-block ul li').hide(time);
+			$('h3.quest span').hide(time);
+			$('aside p.quest_info').hide(time);
+			$('h3.alert span').hide(time);
+			$('aside p.alert_info').hide(time);
+
+
+		});
+
+		$('menu span.menu_icon').on('click', function(){
+			$('.menu-block ul li').toggle(time);
+			$('h3.quest span').hide(time);
+			$('aside p.quest_info').hide(time);
+			$('h3.alert span').hide(time);
+			$('aside p.alert_info').hide(time);
+			$('.tag-cloud').hide(time);
+		});
+
+		$('aside h3.quest').on('click',function(){
+			$('.menu-block ul li').hide(time);
+			$('.tag-cloud').hide(time);
+			$('h3.alert span').hide(time);
+			$('aside p.alert_info').hide(time);
+			$('aside p.quest_info').toggle(time);
+			$('h3.quest span').toggle(time);
+		});
+	};
+
+	$(document).scroll(function() {
+
 		var scroll = $(window).scrollTop();
-		if(scroll>87 ) {
+		var width = $(document).width();
+
+		if(scroll > 87 ) {
 			$('body').addClass('fixed');
 			if (width > 863) 
 				{

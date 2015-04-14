@@ -36,18 +36,12 @@
 	width: 100%
 }
 
-menu {
-
-	padding: 0;
-
-}
-
 .menu-block menu {
-
 	font-size: 0;
 	text-align: center;
 	max-width: 983px;
 	margin: 0 auto;
+	padding: 0;
 }
 
 .menu-block ul {
@@ -98,22 +92,18 @@ menu {
 }
 
 .menu-block  menu a {
-
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: inherit;
 	line-height: 48px;
-
 }
 
 .menu-block menu ul li a:hover {
-
 	background: #7ca7d9;
 }
 
 main {
-
 	max-width: 983px;
 	min-width: 310px;
 	margin: 0 auto;
@@ -122,130 +112,98 @@ main {
 
 
 main section {
-
 	width: 68.3%;
 	float: left;
 	padding-left: 29px;
 }
 
 main aside {
-
 	width: 31.7%;
 	float: right;
 	padding-left: 27px;
-
 }
 
 section article {
-
 	width: 100%;
 	margin-bottom: 55px;
 }
 
 article img {
-
 	display: block;
 	width: 100%;
 	max-height: 228px;
-
 } 
 
 article a.h3 {
-
 	text-decoration: none;
 	display: inline-block;
 	margin: 14px 0 9px;
-
 }
 
 article a.h3 h3 {
-
 	font-size: 20px;
 	color: #69747c;
 	padding: 0;
 	margin: 0;
-
 }
 
 article p {
-
 	font-size: 12px;
 	color: #69747c;
 	text-align: justify;
 	line-height: 18px;
-
 }
 
 article .article-info {
-
 	border-top: 1px solid #e2e5e8;
 	border-bottom: 1px solid #e2e5e8;
 	height: 40px;
 	clear: both;
 	width: 100%;
-
 }
 
 article .article-info-date,
 article .article-info-author {
-
 	height: 38px;
 	line-height: 38px;
 	color: #69747c;
 	float: left;
 	margin-right: 22px;
 	font-size: 12px;
-
 }
 
-article .article-info-author a
-{
-
+article .article-info-author a {
 	text-decoration: none;
 	color: #838b91;
-
 }
 
-article .article-info-author a:hover
-{
-
+article .article-info-author a:hover {
 	text-decoration: underline;
-
 }
 
 article .fa {
-
 	padding: 0 4px;
-
 }
 
-
 article a.h3 h3:hover {
-
 	text-decoration: underline;
 	text-decoration-color: #69747c;
 }
 
 .clear {
-
 	clear: both;
-
 }
 
 .clear:after,
 .clear:before {
-
 	display: table;
 	content: '';
-
 }
 
 article .article-social {
-
 	margin: 7px 0 0;
 	padding: 0;
 	float: right;
-
 }
 
 article .article-social li {
@@ -268,34 +226,33 @@ article .article-social a {
 	color: inherit;
 }
 
-article .article-social li#facebook:hover {
+li.facebook:hover {
 
 	background: #3c5a98;
 }
 
-article .article-social li#googleplus:hover {
+li.googleplus:hover {
 
 	background: #c25234;
 }
 
-article .article-social li#twitter:hover {
+li.twitter:hover {
 
 	background: #00aced;
 
 }
 
-article .article-social li#vk:hover {
+li.vk:hover {
 
 	background: #48729e;
 
 }
 
-article .article-social li#instagram:hover {
+li.instagram:hover {
 
 	background: #d83933;
 
 }
-
 
 .some-info h3 {
 	margin:0;
@@ -309,7 +266,7 @@ article .article-social li#instagram:hover {
 	position: relative;
 }
 
-.some-info h3:before {
+.some-info h3.quest:before {
 	content: '?';
 	display: block;
 	height: 28px;
@@ -325,6 +282,16 @@ article .article-social li#instagram:hover {
 
 .some-info h3.alert:before {
 	content: '!';
+	display: block;
+	height: 28px;
+	width: 28px;
+	background: #6794b7;
+	color: white;
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 28px;
+	text-align: center;
 }
 
 .tag-cloud {
@@ -345,9 +312,11 @@ article .article-social li#instagram:hover {
 	position: relative;
 	transition: background .4s ease;
 }
+
 .tag-cloud li:hover {
 	background: #b2d4ec;
 }
+
 .tag-cloud li:before {
 	width: 0;
 	height: 0;
@@ -361,9 +330,11 @@ article .article-social li#instagram:hover {
 	display: block;
 	transition: border .4s ease;
 }
+
 .tag-cloud li:hover:before {
 	border-left-color: #b2d4ec;
 }
+
 .tag-cloud li:after {
 	content: '';
 	position: absolute;
@@ -375,6 +346,7 @@ article .article-social li#instagram:hover {
 	background: #fff;
 	margin-top: -4px;
 }
+
 .tag-cloud li a {
 	color: inherit;
 	text-decoration: none;
@@ -387,6 +359,7 @@ article .article-social li#instagram:hover {
 	left: 0;
 	z-index: 100;
 }
+
 .fixed .top-logo {
 	padding-bottom: 134px;
 }
@@ -416,11 +389,7 @@ article .article-social li#instagram:hover {
   	top: 5px;
 }
 
-span.tag_icon {
-	display: none;
-}
-
-span.up_icon {
+span.tag_icon, span.up_icon {
 	display: none;
 }
 
@@ -461,27 +430,19 @@ span.up_icon {
 
 
 
-
-
-
-
-
-
-
-
-
+/*TABLET*/
 
 @media screen and (min-width: 471px) and (max-width: 863px) {
+
+	main {
+		width: 100%;
+		margin: 0 auto;
+	}
 
 	main aside,
 	main section {
 		float: none; 
 		width: 100%;
-	}
-
-	main {
-		width: 100%;
-		margin: 0 auto;
 	}
 
 	main aside {
@@ -496,8 +457,7 @@ span.up_icon {
 		padding: 0 7px;
 	}
 
-	.some-info h3.quest
-	{
+	.some-info h3.quest {
 		position: absolute;
 		left: 0;
 		top: 90px;
@@ -506,9 +466,8 @@ span.up_icon {
 		border: none;
 		font-size: 0;
 		border-bottom: 4px solid transparent;
-		cursor: pointer;w
+		cursor: pointer;
 	}
-
 
 	.some-info h3.alert {
 		position: absolute;
@@ -521,7 +480,6 @@ span.up_icon {
 		border-bottom: 4px solid transparent;
 		cursor: pointer;
 	}
-
 
 	.some-info h3.quest span {
 		font-size: 17px;
@@ -543,8 +501,9 @@ span.up_icon {
 		font-size: 17px;
 	  	height: 43px;
 	  	position: absolute;
-	 	left: 0;
-  		bottom: -143px;
+	 	left: 43px;
+ 		bottom: -49px;
+ 		white-space: nowrap;
 	 	 background: #eef4fa;
 	  	color: #6290b4;
 	  	line-height: 43px;
@@ -552,18 +511,6 @@ span.up_icon {
 	  	display: none;
 	  	transform-origin: 0 0;
 		transform: rotate(90deg);
-	}
-
-
-/*	.some-info h3.alert {
-			right: 0;
-			left: auto;
-	}*/
-
-	.some-info h3.alert span {
-		left: 43px;
- 		bottom: -49px;
- 		white-space: nowrap;
 	}
 
 	.some-info h3.quest:before,
@@ -577,7 +524,7 @@ span.up_icon {
 		transition: all .4s ease;
 	}
 
-	aside h3:hover:before {
+	aside h3.alert:hover:before, aside h3.quest:hover:before {
 		background: rgba(255,255,255,0.45);
 	}
 
@@ -613,23 +560,23 @@ span.up_icon {
 	}
 
 
-	#facebook{
+	.article-social li.facebook {
 		background: #3c5a98;
 	}
 
-	#googleplus {
+	.article-social li.googleplus {
 		background: #c25234;
 	}
 
-	#twitter {
+	.article-social li.twitter {
 		background: #00aced;
 	}
 
-	#vk {
+	.article-social li.vk {
 		background: #48729e;
 	}
 
-	#instagram {
+	.article-social li.instagram {
 		background: #d83933;
 	}
 
@@ -767,28 +714,28 @@ span.up_icon {
   		float: none;
   	}
 
-	#facebook{
+	
+	.article-social li.facebook {
 		background: #3c5a98;
 	}
 
-	#googleplus {
+	.article-social li.googleplus {
 		background: #c25234;
 	}
 
-	#twitter {
+	.article-social li.twitter {
 		background: #00aced;
 	}
 
-	#vk {
+	.article-social li.vk {
 		background: #48729e;
 	}
 
-	#instagram {
+	.article-social li.instagram {
 		background: #d83933;
 	}
 
-	.some-info h3.quest,
-	.some-info h3.alert {
+	.some-info h3.quest {
 		position: absolute;
 		left: 2px;
 		top: 55px;;
@@ -799,30 +746,37 @@ span.up_icon {
 		border-bottom: 4px solid transparent;
 		cursor: pointer;
 	}
-
-	.some-info h3.quest span,
-	.some-info h3.alert span {
-		font-size: 17px;
-	  	height: 43px;
-	  	transform: rotate(-90deg);
-	  	position: absolute;
-	 	left: 0;
-  		bottom: -143px;
-	 	background: #eef4fa;
-	  	color: #6290b4;
-	  	line-height: 43px;
-	  	padding: 0 18px;
-	  	display: none;
-	  	transform-origin: 0 0;
-	}
-
+	
 	.some-info h3.alert {
+		position: absolute;
 		left: 35px;
+		top: 55px;;
+ 		height: 33px;
+  		width: 42px;
+		border: none;
+		font-size: 0;
+		border-bottom: 4px solid transparent;
+		cursor: pointer;
 	}
 
+	.some-info h3.quest span, .some-info h3.alert span {
+		font-size: 17px;
+	  	transform: none;
+	  	position: absolute;
+	 	left: 170px;
+  		top: 233px;
+  		background: transparent;
+  		color: white;
+  		display: none;
+  		line-height: 43px;
+	  	padding: 0 18px;
+	  	height: 43px;
+	  	transform-origin: 0 0;
+	  	z-index: 105;
+	}
 	.some-info h3.alert span {
-		left: 0;
-  		bottom: -177px;
+		left: 106px;
+  		top: 217px;
   		white-space: nowrap;
 	}
 
@@ -846,6 +800,7 @@ span.up_icon {
 		padding: 25px 0 32px;
 		margin: 0;
 		display: none;
+		position: relative;
 	}
 
 
@@ -910,21 +865,6 @@ span.up_icon {
 		z-index: 101;
 	}
 
-	.some-info h3.quest span,
-	.some-info h3.alert span {
-		font-size: 17px;
-	  	height: 43px;
-	  	position: absolute;
-	 	left: 0;
-  		bottom: -143px;
-	 	background: #eef4fa;
-	  	color: #6290b4;
-	  	line-height: 43px;
-	  	padding: 0 18px;
-	  	display: none;
-	  	transform-origin: 0 0;
-	}
-
 	span.menu_icon {
 		font-size: 23px;
   		position: absolute;
@@ -972,6 +912,6 @@ span.up_icon {
   		font-size: 22px;
   		color: white;
   		cursor: pointer;
-  		display: block;
+  		display: none;
 	}
 }
