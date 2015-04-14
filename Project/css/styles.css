@@ -254,7 +254,8 @@ li.instagram:hover {
 
 }
 
-.some-info h3 {
+span.about_head, 
+span.some_head {
 	margin:0;
 	padding: 0;
 	border-bottom: 5px solid #6794b7;
@@ -264,9 +265,10 @@ li.instagram:hover {
 	font-weight: bold;
 	padding-left: 42px;
 	position: relative;
+	display: block;
 }
 
-.some-info h3.quest:before {
+span.about_head:before {
 	content: '?';
 	display: block;
 	height: 28px;
@@ -280,7 +282,7 @@ li.instagram:hover {
 	text-align: center;
 }
 
-.some-info h3.alert:before {
+span.some_head:before {
 	content: '!';
 	display: block;
 	height: 28px;
@@ -389,6 +391,30 @@ li.instagram:hover {
   	top: 5px;
 }
 
+
+span.about, span.some {
+	font-size: 18px;
+	display: none;
+  	position: absolute;
+  	left: 0;
+  	top: 2px;
+  	width: 40px;
+  	background: #7ca7d9;
+  	color: #6b9ad0;
+  	height: 49px;
+  	padding: 15px 0;
+  	cursor: pointer;
+}
+
+span.some {
+	left: auto;
+  	right: 0;
+}
+
+span.about:hover, span.some:hover {
+	background: rgba(255,255,255,0.45);
+}
+
 span.tag_icon, span.up_icon {
 	display: none;
 }
@@ -447,6 +473,7 @@ span.tag_icon, span.up_icon {
 
 	main aside {
 		padding: 40px 0 32px;
+		position: relative;
 	}
 
 	.menu-block menu ul li {
@@ -456,76 +483,34 @@ span.tag_icon, span.up_icon {
 	.menu-block menu ul li a {
 		padding: 0 7px;
 	}
-
-	.some-info h3.quest {
-		position: absolute;
-		left: 0;
-		top: 90px;
-		height: 53px;
-		width: 44px;
-		border: none;
-		font-size: 0;
-		border-bottom: 4px solid transparent;
-		cursor: pointer;
-	}
-
-	.some-info h3.alert {
-		position: absolute;
-		right: 0;
-		top: 90px;
-		height: 53px;
-		width: 44px;
-		border: none;
-		font-size: 0;
-		border-bottom: 4px solid transparent;
-		cursor: pointer;
-	}
-
-	.some-info h3.quest span {
+		span.about_head, span.some_head {
 		font-size: 17px;
-	  	height: 43px;
-	  	position: absolute;
-	 	left: 0;
-  		bottom: -145px;
-	 	 background: #eef4fa;
-	  	color: #6290b4;
-	  	line-height: 43px;
-	  	padding: 0 18px;
-	  	display: none;
-	  	transform-origin: 0 0;
+		height: 40px;
+		position: absolute;
+		width: 120px;
+ 		left: 0;
+  		top: 124px;
+		background: #eef4fa;
+		color: #6290b4;
+		line-height: 40px;
+		padding: 0 32px;
+		display: none;
+		transform-origin: 0 0;
 		transform: rotate(-90deg);
-
+		border-bottom: none;
 	}
 
-	.some-info h3.alert span {
-		font-size: 17px;
-	  	height: 43px;
-	  	position: absolute;
-	 	left: 43px;
- 		bottom: -49px;
+	span.some_head {
+ 		padding: 0 14px;
+  		right: -120px;
+  		left: auto;
+  		top: 4px;
  		white-space: nowrap;
-	 	 background: #eef4fa;
-	  	color: #6290b4;
-	  	line-height: 43px;
-	  	padding: 0 18px;
-	  	display: none;
-	  	transform-origin: 0 0;
 		transform: rotate(90deg);
 	}
 
-	.some-info h3.quest:before,
-	.some-info h3.alert:before {
-		font-size: 17px;
-		width: 100%;
-		height: 100%;
-		line-height: 58px;
-		color: #6b9ad0;
-		background: rgba(255,255,255,0.25);
-		transition: all .4s ease;
-	}
-
-	aside h3.alert:hover:before, aside h3.quest:hover:before {
-		background: rgba(255,255,255,0.45);
+	span.about_head:before, span.some_head:before {
+		display: none;
 	}
 
 	aside p {
@@ -585,6 +570,10 @@ span.tag_icon, span.up_icon {
 		position: fixed;
 		top: 2px;
 		z-index: 101;
+	}
+
+	span.about, span.some {
+		display: inline-block;
 	}
 
 
@@ -735,64 +724,45 @@ span.tag_icon, span.up_icon {
 		background: #d83933;
 	}
 
-	.some-info h3.quest {
-		position: absolute;
-		left: 2px;
-		top: 55px;;
- 		height: 33px;
-  		width: 42px;
-		border: none;
-		font-size: 0;
-		border-bottom: 4px solid transparent;
-		cursor: pointer;
+	span.about, span.some {
+		font-size: 16px;
+		display: inline-block;
+  		left: 2px;
+  		top: 2px;
+  		width: 30px;
+  		background: rgba(255,255,255,0.25);
+  		height: 29px;
+  		padding: 7px 0;
 	}
-	
-	.some-info h3.alert {
-		position: absolute;
+
+	span.some {
 		left: 35px;
-		top: 55px;;
- 		height: 33px;
-  		width: 42px;
-		border: none;
-		font-size: 0;
-		border-bottom: 4px solid transparent;
-		cursor: pointer;
+		line-height: 19px;
 	}
 
-	.some-info h3.quest span, .some-info h3.alert span {
-		font-size: 17px;
-	  	transform: none;
-	  	position: absolute;
-	 	left: 170px;
-  		top: 233px;
-  		background: transparent;
-  		color: white;
+	span.about_head, span.some_head {
+  		position: absolute;
+  		width: 120px;
+  		right: 17px;
+  		top: 291px;
+  		/* background: #eef4fa; */
+  		color: #FFFFFF;
   		display: none;
-  		line-height: 43px;
-	  	padding: 0 18px;
-	  	height: 43px;
-	  	transform-origin: 0 0;
-	  	z-index: 105;
-	}
-	.some-info h3.alert span {
-		left: 106px;
-  		top: 217px;
-  		white-space: nowrap;
+  		transform: none;
+  		border-bottom: 0;
 	}
 
-	.some-info h3.quest:before,
-	.some-info h3.alert:before {
-		font-size: 15px;
-  		width: 72%;
-  		height: 100%;
-  		line-height: 31px;
-		color: #6b9ad0;
-		background: rgba(255,255,255,0.25);
-		transition: all .4s ease;
+	span.some_head {
+ 		padding: 0 14px;
+  		right: -120px;
+  		left: auto;
+  		top: 4px;
+ 		white-space: nowrap;
+		transform: rotate(90deg);
 	}
 
-	.some-info h3:hover:before, .tags span:hover {
-		background: rgba(255,255,255,0.45);
+	span.about_head:before, span.some_head:before {
+		display: none;
 	}
 
 	.some-info p {
