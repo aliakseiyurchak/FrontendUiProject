@@ -60,7 +60,7 @@
 
 }
 
-.menu-block menu ul li.active:before {
+.menu-block menu ul li.active:before{
 
 	content:'';
 	width: 0;
@@ -75,7 +75,7 @@
 	margin-left: -10px;
 }
 
-.menu-block menu li.active:after {
+.menu-block menu li.active:after{
 	
 	content: "";
 	width: 0;
@@ -91,12 +91,13 @@
 	
 }
 
-.menu-block  menu a {
+.menu-block  menu ul li a {
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: inherit;
 	line-height: 48px;
+	transition: all .3s ease;
 }
 
 .menu-block menu ul li a:hover {
@@ -296,7 +297,7 @@ span.some_head:before {
 	text-align: center;
 }
 
-.some-info p {
+aside p {
 	text-align: justify;
 }
 
@@ -395,7 +396,6 @@ span.some_head:before {
   	top: 5px;
 }
 
-
 span.about, span.some {
 	font-size: 18px;
 	display: none;
@@ -408,6 +408,7 @@ span.about, span.some {
   	height: 49px;
   	padding: 15px 0;
   	cursor: pointer;
+  	transition: all .4s ease;
 }
 
 span.some {
@@ -487,7 +488,12 @@ span.tag_icon, span.up_icon {
 	.menu-block menu ul li a {
 		padding: 0 7px;
 	}
-		span.about_head, span.some_head {
+
+	span.about_head, span.some_head {
+		display: none;
+	}
+
+	.show_about span.about_head, .show_some span.some_head {
 		font-size: 17px;
 		height: 40px;
 		position: absolute;
@@ -498,13 +504,13 @@ span.tag_icon, span.up_icon {
 		color: #6290b4;
 		line-height: 40px;
 		padding: 0 32px;
-		display: none;
+		display: block;
 		transform-origin: 0 0;
 		transform: rotate(-90deg);
 		border-bottom: none;
 	}
 
-	span.some_head {
+	.show_some span.some_head {
  		padding: 0 14px;
   		right: -120px;
   		left: auto;
@@ -519,8 +525,11 @@ span.tag_icon, span.up_icon {
 
 	aside p {
 		display: none;
+	}
+
+	.show_about p.quest_info, .show_some p.alert_info {
+		display: block;
 		padding: 0 64px;
-  		text-align: justify;
   		margin: 0 0 40px;
 	}
 
@@ -575,8 +584,9 @@ span.tag_icon, span.up_icon {
 	}
 
 
-}
 
+
+}
 
 
 
@@ -660,7 +670,7 @@ span.tag_icon, span.up_icon {
 	}
 
 	main section {
-		padding: 18px 16px;
+		padding: 18px 16px 0;
 	}
 
 	main {
@@ -691,7 +701,7 @@ span.tag_icon, span.up_icon {
 
 	article .article-social {
 		position: absolute;
-		bottom: -8%;
+		bottom: -10%;
   		left: 0;
   		display: inline-block;
   		width: 100%;
@@ -735,43 +745,55 @@ span.tag_icon, span.up_icon {
 		left: 35px;
 		line-height: 19px;
 	}
-
-	span.about_head, span.some_head {
-  		position: absolute;
-  		width: 120px;
-  		right: 17px;
-  		top: 291px;
-  		/* background: #eef4fa; */
-  		color: #FFFFFF;
-  		display: none;
-  		transform: none;
-  		border-bottom: 0;
+ 	span.about_head, span.some_head {
+		display: none;
 	}
 
-	span.some_head {
- 		padding: 0 14px;
-  		right: -120px;
-  		left: auto;
-  		top: 4px;
+	.show_about span.about_head, .show_some span.some_head {
+  		position: absolute;
+  		padding-left: 0;
+  		width: 120px;
+  		right: 32px;
+  		bottom: 6px;
+  		color: #FFFFFF;
+  		display: block;
+  		transform: none;
+  		border-bottom: 0;
+  		text-align: center;
+	}
+
+	.show_some span.some_head {
+ 		
  		white-space: nowrap;
-		transform: rotate(90deg);
 	}
 
 	span.about_head:before, span.some_head:before {
 		display: none;
 	}
 
+	.some-info {
+		position: relative;
+	}
+	
 	.some-info p {
+		display: none;
+	}
+
+	.show_about p.quest_info, .show_some p.alert_info {
 		text-align: justify;
 		padding: 25px 0 32px;
 		margin: 0;
-		display: none;
+		display: block;
 		position: relative;
 	}
-
+	
 
 	.tag-cloud {
 		display: none;
+	}
+
+	.show_tags {
+		display: block;
 		text-align: center;
 		padding: 32px 6px 36px;
 	}
@@ -810,6 +832,7 @@ span.tag_icon, span.up_icon {
   		vertical-align: middle;
   		background: rgba(255,255,255,0.25);
   		line-height: 28px;
+  		transition: background .4s ease;
 	}
 	
 	.tags span.tag_icon:hover {	
@@ -829,6 +852,7 @@ span.tag_icon, span.up_icon {
   		right: 12px;
   		color: rgba(255,255,255,0.25);
   		cursor: pointer;
+  		transition: all .4s ease;
 	}
 
 	span.menu_icon:hover {
@@ -842,33 +866,29 @@ span.tag_icon, span.up_icon {
 
 	.menu-block menu ul li{
 		display: none;
-		width: 100%
 
 	}
 
-	.menu-block ul{
-		
+	.menu-block menu ul.show_menu li {
+		display: block;
+		width: 100%;
+	}
+
+	.menu-block menu ul.show_menu li a:hover {
+		background: #B6CCE4;
+		color: #ffffff;
+	}
+
+	.menu-block ul.show_menu {
 		background: #fff;
 		padding: 1px 0;
+		
 	}
 
-	.menu-block ul li a{
+	.menu-block menu ul.show_menu li a {
 		background: #e1eefc;
 		color: #7ca5d6;
 	}
 
-	.menu-block ul li a:hover{
-		background: #a8cdf5;
-		color: #ffffff;
-	}
 
-	span.up_icon{
-		position: absolute;
- 		right: 11px;
-  		top: 276px;
-  		font-size: 22px;
-  		color: white;
-  		cursor: pointer;
-  		display: none;
-	}
 }
