@@ -296,6 +296,10 @@ span.some_head:before {
 	text-align: center;
 }
 
+.some-info p {
+	text-align: justify;
+}
+
 .tag-cloud {
 	margin: 0;
 	padding: 0;
@@ -565,12 +569,6 @@ span.tag_icon, span.up_icon {
 		background: #d83933;
 	}
 
-	.fixed .some-info h3.quest,
-	.fixed .some-info h3.alert {
-		position: fixed;
-		top: 2px;
-		z-index: 101;
-	}
 
 	span.about, span.some {
 		display: inline-block;
@@ -682,8 +680,6 @@ span.tag_icon, span.up_icon {
   		height: 53px;
 	}
 
-
-
 	.underline, li.active:before, li.active:after {
 		display: none;
 	}
@@ -783,15 +779,6 @@ span.tag_icon, span.up_icon {
 	.tag-cloud li {
 		padding: 0 12px 0 14px;
 	}
-
-
-	.fixed .some-info h3.quest,
-	.fixed .some-info h3.alert {
-		position: fixed;
-		top: 2px;
-		z-index: 101;
-	}
-
 
 	.menu-block {
 		height: 33px;
