@@ -214,6 +214,7 @@ article .article-social li {
 	color: white;
 	border-radius: 4px;
 	display: inline-block;
+	margin: 0 0.0064%;
 	transition: all .4s ease;
 }
 
@@ -753,7 +754,7 @@ span.tag_icon, span.up_icon {
   		position: absolute;
   		padding-left: 0;
   		width: 120px;
-  		right: 32px;
+  		right: -15px;
   		bottom: 6px;
   		color: #FFFFFF;
   		display: block;
@@ -763,7 +764,7 @@ span.tag_icon, span.up_icon {
 	}
 
 	.show_some span.some_head {
- 		
+ 		right: -4px;
  		white-space: nowrap;
 	}
 

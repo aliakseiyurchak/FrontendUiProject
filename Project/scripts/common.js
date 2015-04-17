@@ -69,7 +69,9 @@ jQuery(document).ready(function(){
 				$('span.some').on('click', function() {
 					$('body').scrollTop(0);
 				});
-				
+				$('span.tag_icon').on('click', function() {
+					$('body').scrollTop(0);
+				});
 			};
 			if ($width < 453) {
 				$('.logo_menu_phone').show(time);
