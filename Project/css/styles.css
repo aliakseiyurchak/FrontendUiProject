@@ -373,20 +373,18 @@ aside p {
 }
 
 
-.menu-block menu .logo_menu{
-	display: inline-block;
+.logo_menu{
+	display: none;
 	width: 41px;
 	height: 41px;
 	background: url(../images/logo_menu.png) no-repeat;
 	float: left;
 	margin:7px 0 0 28px;
 	position: absolute;
-	display: none;
 	left: 0;
 }
 
-.menu-block menu .logo_menu_phone{
-	display: inline-block;
+.logo_menu_phone{
 	width: 135px;
 	height: 23px;
 	background: url(../images/logo_menu_phone.png) no-repeat;
@@ -583,8 +581,6 @@ span.tag_icon, span.up_icon {
 	span.about, span.some {
 		display: inline-block;
 	}
-
-
 
 
 }
@@ -883,7 +879,6 @@ span.tag_icon, span.up_icon {
 	.menu-block ul.show_menu {
 		background: #fff;
 		padding: 1px 0;
-		
 	}
 
 	.menu-block menu ul.show_menu li a {

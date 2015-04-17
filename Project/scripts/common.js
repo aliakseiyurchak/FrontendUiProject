@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 
-	var time = 500;
+	var time = 300;
 	var $width = $(window).width();
 	var show_some = function() {
 		$('.some-info').removeClass('show_about');
@@ -35,6 +35,10 @@ jQuery(document).ready(function(){
 
 	$(window).resize(function(){
 		$width = $(window).width();
+		if (($width > 453) && ($width < 847)) {
+			$('.logo_menu').hide(time);
+			$('.logo_menu_phone').hide(time);
+		};
 	});
 
 	$('span.some').bind('click', function(){
@@ -57,7 +61,7 @@ jQuery(document).ready(function(){
 
 		var $scroll = $(document).scrollTop();
 
-		if( $scroll > 87 ) {
+		if( $scroll > 87) {
 			$('body').addClass('fixed');
 			if ($width >= 847) {
 				$('.logo_menu').show(time);
@@ -67,9 +71,6 @@ jQuery(document).ready(function(){
 					$('body').scrollTop(0);
 				});
 				$('span.some').on('click', function() {
-					$('body').scrollTop(0);
-				});
-				$('span.tag_icon').on('click', function() {
 					$('body').scrollTop(0);
 				});
 			};
